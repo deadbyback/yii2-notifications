@@ -10,6 +10,10 @@ use yii\helpers\Inflector;
 
 trait NotificationTrait
 {
+    
+    public $recipient;
+
+
     /**
      * @return array
      */
