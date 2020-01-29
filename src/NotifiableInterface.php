@@ -17,9 +17,10 @@ interface NotifiableInterface
 
     /**
      * Get the channels the notifiable entity should listen on.
+	 * @param NotificationInterface $notification
      * @return array
      */
-    public function viaChannels();
+    public function viaChannels(NotificationInterface $notification);
 
     /**
      * Get the notification routing information for the given channel.

@@ -86,7 +86,7 @@ class Notifier extends Component
         }
         
         foreach ($recipients as $recipient) {
-            $channels = array_intersect($recipient->viaChannels(), array_keys($this->channels));
+            $channels = array_intersect($recipient->viaChannels($notifications), array_keys($this->channels));
             foreach ($notifications as $notification) {
                 if (!$recipient->shouldReceiveNotification($notification)) {
                     continue;
